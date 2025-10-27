@@ -2,7 +2,7 @@ import { use } from "react";
 
 const user = {
   name: "Roronoa Zoro",
-  imageUrl: "./public/luhpring.jpg",
+  imageUrl: "/luhpring.jpg",
   imageSize: 90,
 };
 
