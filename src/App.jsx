@@ -1,4 +1,5 @@
 import { use } from "react";
+import './App.css';
 
 const user = {
   name: "Roronoa Zoro",
