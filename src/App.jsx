@@ -1,6 +1,8 @@
 import { use } from "react";
 import { useState } from "react";
 import './App.css';
+import Profile from "./Profile";
+import Gallery from "./Gallery";
 
 export default function MyApp() {
 
@@ -23,6 +25,8 @@ export default function MyApp() {
         <MyButton count={count} onClick={handleClick} />
         <MyButton count={count} onClick={handleClick} />
       </div>
+
+      <Gallery />
     </>
   );
 }
