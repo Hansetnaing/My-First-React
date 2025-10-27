@@ -1,54 +1,24 @@
 import { use } from "react";
 import { useState } from "react";
 import './App.css';
-import Profile from "./Profile";
-import Gallery from "./Gallery";
 
-export default function MyApp() {
-
-  const [count, setCount] = useState(0);
-  
-  function handleClick() {
-    setCount(count + 1);
-  }
-
+function Items({name, isPacked}) {
   return (
-    <>
-      <div>
-        <h1>Counters that update separately</h1>
-        <MyButtonSeparate />
-        <MyButtonSeparate />
-      </div>
-
-      <div>
-        <h1>Counters that update together</h1>
-        <MyButton count={count} onClick={handleClick} />
-        <MyButton count={count} onClick={handleClick} />
-      </div>
-
-      <Gallery />
-    </>
+    <li>
+      {isPacked ? "✔" : "❌"} {name}
+    </li>
   );
 }
 
-function MyButton({ count, onClick }) {
+export default function App() {
   return (
-    <button onClick={onClick}>
-      Clicked {count} times
-    </button>
-  );
-}
-
-function MyButtonSeparate() {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
+    <section>
+      <h1>My Packing Items</h1>
+      <ul>
+        <Items name="Passport" isPacked={true} />
+        <Items name="Socks" isPacked={false} />
+        <Items name="Charger" isPacked={true} />
+      </ul>
+    </section>
   );
 }
