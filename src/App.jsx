@@ -1,27 +1,20 @@
-import { use } from "react";
+import { use } from "react"; 
 import './App.css';
 
-const user = {
-  name: "Roronoa Zoro",
-  imageUrl: "/luhpring.jpg",
-  imageSize: 90,
-};
+const products = [
+  {'title': 'Apple', 'id': 1},
+  {'title': 'Banana', 'id': 2},
+  {'title': 'Cherry', 'id': 3},
+]
 
-export default function App() {
+export default function ShoppingApp() {
+  const listItems = products.map((product) => (
+    <li key={product.id}>
+      {product.title}
+    </li>
+  ));
+
   return (
-    <>
-      <h1>{user.name}</h1>
-      <img
-        className="avatar"
-        src={user.imageUrl}
-        alt={'Photo of ' + user.name}
-        style={
-          {
-            width: user.imageSize,
-            height: user.imageSize
-          }
-        }
-        />
-    </>
+    <ul>{listItems}</ul>
   );
 }
