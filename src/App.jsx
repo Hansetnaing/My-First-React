@@ -1,11 +1,17 @@
-import Gallery from './Gallery.jsx';
-import { Profile } from './Profile.jsx';
+import React from "react"
 
-export default function App() {
+export default function Bio() {
   return (
-    <div>
-      <Profile />
-      <Gallery />
+    <>
+    <div className="intro">
+      <h1>Welcome to my website!</h1>
     </div>
+    <p className="summary">
+      You can find my thoughts here.
+      <br />
+      <br />
+      <b>And <i>pictures</i> of scientists!</b>
+    </p>
+    </>
   );
 }
