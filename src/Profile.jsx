@@ -1,10 +1,8 @@
-export default function Profile() {
-    return (
-        <img
-            src="luhpring.jpg"
-            alt="Lu Hpring"
-            width={200}
-            height={200}
-        />
-    );
+export function Profile() {
+  return (
+    <img
+      src="https://i.imgur.com/QIrZWGIs.jpg"
+      alt="Alan L. Hart"
+    />
+  );
 }
