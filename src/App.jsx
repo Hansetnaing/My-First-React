@@ -1,17 +1,14 @@
-import React from "react"
+const today = new Date();
 
-export default function Bio() {
+function formatDate(date) {
+  return new Intl.DateTimeFormat(
+    'en-US',
+    { weekday: 'long' }
+  ).format(date);
+}
+
+export default function TodoList() {
   return (
-    <>
-    <div className="intro">
-      <h1>Welcome to my website!</h1>
-    </div>
-    <p className="summary">
-      You can find my thoughts here.
-      <br />
-      <br />
-      <b>And <i>pictures</i> of scientists!</b>
-    </p>
-    </>
+    <h1>To Do List for {formatDate(today)}</h1>
   );
 }
